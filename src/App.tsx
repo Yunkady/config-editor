@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import AppContent from './components/layout/AppContent'
+import AppFooter from './components/layout/AppFooter'
+import AppHeader from './components/layout/AppHeader'
+import AppSider from './components/layout/AppSider'
 
 function App() {
-	const [text, setText] = useState('')
 	return (
 		<>
-			<h1 className='text-center text-5xl'>
-				Config editor for IQ Plugins
-			</h1>
-			<textarea
-				value={text}
-				onChange={e => setText(e.target.value)}
-			></textarea>
+			<AppHeader />
+			<AppContent>
+				<AppSider />
+			</AppContent>
+			<AppFooter />
 		</>
 	)
 }
